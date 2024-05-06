@@ -23,7 +23,7 @@ for idx, (question, expected_output) in enumerate(zip(questions, expected_soluti
     # Ensure that the inputs are strings
     expected_output = str(expected_output)
     print("Calling GPT for case " + str(idx + 1) + " with question: " + question)
-    gpt_output = str(chat("Solve this question. " + question + ". When giving the answer, format your response by returning `The answer to (question) is (answer)`. For the answer, you cannot display it using latex. It needs to be in regular text."))
+    gpt_output = str(chat("Solve this question. " + question + ". When giving the answer, format your response by returning `The answer to (question) is (answer)`. For the answer, you CANT display it using latex. It needs to be in regular text format."))
     print("GPT Successfully Answered with", gpt_output)
     # Find the last occurrence of "is" or "="
     last_is_index = gpt_output.rfind(" is ")

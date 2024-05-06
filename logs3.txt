@@ -1,0 +1,52 @@
+Calling GPT for case 1 with question: Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}.
+GPT Successfully Answered with The answer to the infinite limit: lim x->1 (2 - x) / (x - 1)^2 is -1/2.
+Case 1: FAIL
+Case 1 - Question: "Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}.", Extracted Answer: "-1/2.", Expected: "negative infinity", Similarity: 0.49524855613708496
+Method and Approach: The answer to the infinite limit: lim x->1 (2 - x) / (x - 1)^2
+
+Calling GPT for case 2 with question: Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}
+GPT Successfully Answered with The answer to the question \lim_{x \to -3^+} \frac{x + 2}{x + 3} is negative infinity.
+Case 2: PASS
+Case 2 - Question: "Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}", Extracted Answer: "negative infinity.", Expected: "positive infinity", Similarity: 0.8553560972213745
+Method and Approach: The answer to the question \lim_{x \to -3^+} \frac{x + 2}{x + 3}
+
+Calling GPT for case 3 with question: Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) 
+GPT Successfully Answered with The answer to \lim_{x \to 3} (2x + |x - 3|) is 6.
+Case 3: PASS
+Case 3 - Question: "Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) ", Extracted Answer: "6.", Expected: "6", Similarity: 0.9267165660858154
+Method and Approach: The answer to \lim_{x \to 3} (2x + |x - 3|)
+
+Calling GPT for case 4 with question: Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}.
+GPT Successfully Answered with The answer to the limit \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7} is \frac{1}{6}
+Case 4: PASS
+Case 4 - Question: "Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}.", Extracted Answer: "\frac{1}{6}", Expected: "1/6", Similarity: 0.8440941572189331
+Method and Approach: The answer to the limit \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}
+
+Calling GPT for case 5 with question: Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}
+GPT Successfully Answered with To evaluate the limit, we can see that both the numerator and denominator approach zero as x approaches 4. We can rewrite the expression by rationalizing the denominator to get \frac{5 + \sqrt{x}}{\sqrt{5 + x}} * \frac{\sqrt{5 + x}}{\sqrt{5 + x}} = \frac{5\sqrt{5 + x} + x}{5 + x}. Now, we can substitute x = 4 into the expression to get (5\sqrt{9} + 4)/(9) = (5*3 + 4)/9 = (15 + 4)/9 = 19/9. 
+
+Therefore, the answer to the limit \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}} is 19/9.
+Case 5: FAIL
+Case 5 - Question: "Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}", Extracted Answer: "19/9.", Expected: "7/3", Similarity: 0.6094729900360107
+Method and Approach: To evaluate the limit, we can see that both the numerator and denominator approach zero as x approaches 4. We can rewrite the expression by rationalizing the denominator to get \frac{5 + \sqrt{x}}{\sqrt{5 + x}} * \frac{\sqrt{5 + x}}{\sqrt{5 + x}} = \frac{5\sqrt{5 + x} + x}{5 + x}. Now, we can substitute x = 4 into the expression to get (5\sqrt{9} + 4)/(9) = (5*3 + 4)/9 = (15 + 4)/9 = 19/9. 
+
+Therefore, the answer to the limit \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}
+
+Calling GPT for case 6 with question: Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}
+GPT Successfully Answered with To evaluate the limit, we first notice that the function $e^{x^2 - x}$ is continuous for all values of $x$. Therefore, we can simply substitute $x = 1$ into the function to find the limit.
+
+So, the answer to \lim_{x \to 1} e^{x^2 - x} is e^0, or 1.
+Case 6: FAIL
+Case 6 - Question: "Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}", Extracted Answer: "e^0, or 1.", Expected: "1", Similarity: 0.4327396750450134
+Method and Approach: To evaluate the limit, we first notice that the function $e^{x^2 - x}$ is continuous for all values of $x$. Therefore, we can simply substitute $x = 1$ into the function to find the limit.
+
+So, the answer to \lim_{x \to 1} e^{x^2 - x}
+
+Calling GPT for case 7 with question: Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} 
+GPT Successfully Answered with The answer to the limit \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} is 2.
+Case 7: PASS
+Case 7 - Question: "Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} ", Extracted Answer: "2.", Expected: "2", Similarity: 0.8948250412940979
+Method and Approach: The answer to the limit \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)}
+
+Passed: 4, Failed: 3
+Pass Rate for Answer: 57.14%
