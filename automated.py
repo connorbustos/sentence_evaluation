@@ -4,18 +4,17 @@ import time
 import re
 from sentence_transformers import SentenceTransformer, util
 
-client = OpenAI(api_key="api_key")
+client = OpenAI(api_key="key")
 
 def chat(prompt):
     response = client.chat.completions.create(model="gpt-3.5-turbo",
     messages=[{"role": "user", "content": prompt}])
     return response.choices[0].message.content.strip()
 
-file_path = 'limits_automated_cases.csv'  # Update this with the actual file path
+file_path = 'gpt_automated_test_cases.csv'  # Update this with the actual file path
 data = pd.read_csv(file_path)
 questions = expected_solution_array = data['Question'].fillna('No Solution').to_numpy()
 expected_solution_array = data['Expected Solution'].fillna('No Solution').to_numpy()
-
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
 pass_count, fail_count = 0, 0
@@ -24,19 +23,26 @@ for idx, (question, expected_output) in enumerate(zip(questions, expected_soluti
     # Ensure that the inputs are strings
     expected_output = str(expected_output)
     print("Calling GPT for case " + str(idx + 1) + " with question: " + question)
-    gpt_output = str(chat(question + " When giving the answer, format your response by saying `The answer to (question) is (answer).` For the answer only, display in Non Latex."))
+    gpt_output = str(chat("Solve this question. " + question + ". When giving the answer, format your response by returning `The answer to (question) is (answer)`. For the answer, you cannot display it using latex. It needs to be in regular text."))
     print("GPT Successfully Answered with", gpt_output)
-
-    last_is_index = max(gpt_output.rfind(" is "), gpt_output.rfind(" = "))
-    if last_is_index != -1:
-        # Extract everything after "is" for the answer
-        extracted_answer = gpt_output[last_is_index + 4:].strip()
-        # Extract everything before "is" for the method and approach
-        method_and_approach = gpt_output[:last_is_index].strip()
+    # Find the last occurrence of "is" or "="
+    last_is_index = gpt_output.rfind(" is ")
+    last_equals_index = gpt_output.rfind(" = ")
+    if last_is_index != -1 or last_equals_index != -1:
+        if last_is_index > last_equals_index:
+            delimiter_length = 4  # Length of " is "
+            last_index = last_is_index
+        else:
+            delimiter_length = 3  # Length of " = "
+            last_index = last_equals_index
+        # Extract everything after "is" or "=" for the answer
+        extracted_answer = gpt_output[last_index + delimiter_length:].strip()
+        # Extract everything before "is" or "=" for the method and approach
+        method_and_approach = gpt_output[:last_index].strip()
     else:
         extracted_answer = 'No Solution'
-        method_and_approach = gpt_output
-    # Encode and compute similarity between extracted answer and expected output
+        method_and_approach = gpt_output  # Use whole output as method if no delimiter found
+
     embedding_1 = model.encode(extracted_answer, convert_to_tensor=True)
     embedding_2 = model.encode(expected_output, convert_to_tensor=True)
     cosine_similarity = util.pytorch_cos_sim(embedding_1, embedding_2)

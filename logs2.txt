@@ -1,0 +1,108 @@
+Calling GPT for case 1 with question: Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}.
+GPT Successfully Answered with The answer to the infinite limit \lim_{x \to 1} \frac{2 - x}{(x - 1)^2} is -\infty.
+Case 1: FAIL
+Case 1 - Question: "Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}.", Extracted Answer: "-\infty.", Expected: "negative infinity", Similarity: 0.5854178667068481
+Method and Approach: The answer to the infinite limit \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}
+
+Calling GPT for case 2 with question: Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}
+GPT Successfully Answered with The answer to the infinite limit \lim_{x \to -3^+} \frac{x + 2}{x + 3} is positive infinity.
+Case 2: PASS
+Case 2 - Question: "Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}", Extracted Answer: "positive infinity.", Expected: "positive infinity", Similarity: 0.9508720636367798
+Method and Approach: The answer to the infinite limit \lim_{x \to -3^+} \frac{x + 2}{x + 3}
+
+Calling GPT for case 3 with question: Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) 
+GPT Successfully Answered with The answer to \lim_{x \to 3} (2x + |x - 3|) is 9. 
+
+To solve this, we can break down the absolute value function. When x is less than 3, |x - 3| simplifies to -(x - 3), and when x is greater than 3, |x - 3| simplifies to (x - 3). 
+
+1. When x < 3: 
+plug in the value of -(x - 3) into the limit function. We then get: 
+2x + -(x - 3) 
+= 2x - x + 3 
+= x + 3 
+
+Taking the limit as x approaches 3 from the left side, we get: 
+3 + 3 = 6 
+
+2. When x > 3: 
+plug in the value of (x - 3) into the limit function, we get: 
+2x + (x - 3) 
+= 2x + x - 3 
+= 3x - 3 
+
+Taking the limit as x approaches 3 from the right side, we get: 
+3*3 - 3 = 6 
+
+Since the limit from both sides is the same, the limit of the function \lim_{x \to 3} (2x + |x - 3|) is equal to 6 + 3 = 9.
+Case 3: PASS
+Case 3 - Question: "Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) ", Extracted Answer: "9.", Expected: "6", Similarity: 0.7121451497077942
+Method and Approach: The answer to \lim_{x \to 3} (2x + |x - 3|) is 9. 
+
+To solve this, we can break down the absolute value function. When x is less than 3, |x - 3| simplifies to -(x - 3), and when x is greater than 3, |x - 3| simplifies to (x - 3). 
+
+1. When x < 3: 
+plug in the value of -(x - 3) into the limit function. We then get: 
+2x + -(x - 3) 
+= 2x - x + 3 
+= x + 3 
+
+Taking the limit as x approaches 3 from the left side, we get: 
+3 + 3 = 6 
+
+2. When x > 3: 
+plug in the value of (x - 3) into the limit function, we get: 
+2x + (x - 3) 
+= 2x + x - 3 
+= 3x - 3 
+
+Taking the limit as x approaches 3 from the right side, we get: 
+3*3 - 3 = 6 
+
+Since the limit from both sides is the same, the limit of the function \lim_{x \to 3} (2x + |x - 3|) is equal to 6 + 3
+
+Calling GPT for case 4 with question: Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}.
+GPT Successfully Answered with The answer to the limit \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7} is 1/6.
+Case 4: PASS
+Case 4 - Question: "Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}.", Extracted Answer: "1/6.", Expected: "1/6", Similarity: 0.9731301069259644
+Method and Approach: The answer to the limit \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}
+
+Calling GPT for case 5 with question: Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}
+GPT Successfully Answered with To evaluate the limit using continuity, we need to simplify the expression first:
+
+\lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}.
+
+Plugging in x = 4, the expression becomes:
+
+\frac{5 + \sqrt{4}}{\sqrt{5 + 4}} = \frac{5 + 2}{\sqrt{9}} = \frac{7}{3}.
+
+Therefore, the answer to the limit is 7/3.
+Case 5: PASS
+Case 5 - Question: "Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}", Extracted Answer: "7/3.", Expected: "7/3", Similarity: 0.9660114645957947
+Method and Approach: To evaluate the limit using continuity, we need to simplify the expression first:
+
+\lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}.
+
+Plugging in x = 4, the expression becomes:
+
+\frac{5 + \sqrt{4}}{\sqrt{5 + 4}} = \frac{5 + 2}{\sqrt{9}} = \frac{7}{3}.
+
+Therefore, the answer to the limit
+
+Calling GPT for case 6 with question: Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}
+GPT Successfully Answered with To evaluate the limit of  \lim_{x \to 1} e^{x^2 - x}, we can rewrite the function as e^{x(x-1)} and notice that it is a composition of continuous functions, e^x being continuous everywhere and x(x-1) being continuous at x=1.
+
+Therefore, we can directly substitute x=1 into the function e^{x(x-1)} to find that the answer to \lim_{x \to 1} e^{x^2 - x} is e^0 = 1.
+Case 6: PASS
+Case 6 - Question: "Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}", Extracted Answer: "1.", Expected: "1", Similarity: 0.8712990880012512
+Method and Approach: To evaluate the limit of  \lim_{x \to 1} e^{x^2 - x}, we can rewrite the function as e^{x(x-1)} and notice that it is a composition of continuous functions, e^x being continuous everywhere and x(x-1) being continuous at x=1.
+
+Therefore, we can directly substitute x=1 into the function e^{x(x-1)} to find that the answer to \lim_{x \to 1} e^{x^2 - x} is e^0
+
+Calling GPT for case 7 with question: Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} 
+GPT Successfully Answered with The answer to the limit \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} is 2.
+Case 7: PASS
+Case 7 - Question: "Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} ", Extracted Answer: "2.", Expected: "2", Similarity: 0.8948250412940979
+Method and Approach: The answer to the limit \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)}
+
+Passed: 6, Failed: 1
+Pass Rate for Answer: 85.71%
