@@ -1,0 +1,57 @@
+connor@Connors-MacBook-Pro llm_evaluation % /usr/local/bin/python3 /Users/connor/Documents/VSCode/llm_evaluation/automated.py
+Calling GPT for case 1 with question: Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}
+GPT Successfully Answered with The answer to the limit as x approaches 1 of (2 - x) / (x - 1)^2 is -1.
+Case 1: FAIL
+Case 1 - Question: "Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}", Extracted Answer: "-1.", Expected: "-infinity", Similarity: 0.6045239567756653
+Method and Approach: The answer to the limit as x approaches 1 of (2 - x) / (x - 1)^2
+
+Calling GPT for case 2 with question: Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}
+GPT Successfully Answered with The answer to the limit as x approaches -3 from the right of (x + 2)/(x + 3) is positive infinity.
+Case 2: PASS
+Case 2 - Question: "Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3}", Extracted Answer: "positive infinity.", Expected: "infinity", Similarity: 0.8320963382720947
+Method and Approach: The answer to the limit as x approaches -3 from the right of (x + 2)/(x + 3)
+
+Calling GPT for case 3 with question: Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) 
+GPT Successfully Answered with The answer to \lim_{x \to 3} (2x + |x - 3|) is 9.
+Case 3: PASS
+Case 3 - Question: "Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) ", Extracted Answer: "9.", Expected: "6", Similarity: 0.7121451497077942
+Method and Approach: The answer to \lim_{x \to 3} (2x + |x - 3|)
+
+Calling GPT for case 4 with question: Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7} 
+GPT Successfully Answered with The answer to \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7} is 1/6.
+Case 4: PASS
+Case 4 - Question: "Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7} ", Extracted Answer: "1/6.", Expected: "1/6", Similarity: 0.9731301069259644
+Method and Approach: The answer to \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}
+
+Calling GPT for case 5 with question: Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}
+GPT Successfully Answered with The answer to the limit as x approaches 4 of (5 + sqrt(x))/(sqrt(5 + x)) is 2.
+Case 5: FAIL
+Case 5 - Question: "Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}}", Extracted Answer: "2.", Expected: "7/3", Similarity: 0.3389846682548523
+Method and Approach: The answer to the limit as x approaches 4 of (5 + sqrt(x))/(sqrt(5 + x))
+
+Calling GPT for case 6 with question: Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}
+GPT Successfully Answered with The answer to \lim_{x \to 1} e^{x^2 - x} is e^0 = 1.
+Case 6: FAIL
+Case 6 - Question: "Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x}", Extracted Answer: ".", Expected: "1", Similarity: 0.3111102283000946
+Method and Approach: The answer to \lim_{x \to 1} e^{x^2 - x} is e^0
+
+Calling GPT for case 7 with question: Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} 
+GPT Successfully Answered with The answer to \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} is 2.
+Case 7: PASS
+Case 7 - Question: "Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} ", Extracted Answer: "2.", Expected: "2", Similarity: 0.8948250412940979
+Method and Approach: The answer to \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)}
+
+Calling GPT for case 8 with question: Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to -6} \frac{2x + 12}{|x + 6|}
+GPT Successfully Answered with The answer to \lim_{x \to -6} \frac{2x + 12}{|x + 6|} is DNE (Does Not Exist).
+Case 8: FAIL
+Case 8 - Question: "Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to -6} \frac{2x + 12}{|x + 6|}", Extracted Answer: "DNE (Does Not Exist).", Expected: "No Solution", Similarity: 0.26410675048828125
+Method and Approach: The answer to \lim_{x \to -6} \frac{2x + 12}{|x + 6|}
+
+Calling GPT for case 9 with question: Use the definition of continuity and the properties of limits to show that the function is continuous on the given interval. f(x) = \frac{2x + 3}{x - 2}, \quad (2, \infty)
+GPT Successfully Answered with The answer is The function f(x) = \frac{2x + 3}{x -2} is continuous on the interval (2, \infty).
+Case 9: FAIL
+Case 9 - Question: "Use the definition of continuity and the properties of limits to show that the function is continuous on the given interval. f(x) = \frac{2x + 3}{x - 2}, \quad (2, \infty)", Extracted Answer: "continuous on the interval (2, \infty).", Expected: "No Solution", Similarity: 0.069455087184906
+Method and Approach: The answer is The function f(x) = \frac{2x + 3}{x -2}
+
+Passed: 4, Failed: 5
+Pass Rate for Answer: 44.44%
