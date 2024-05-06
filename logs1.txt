@@ -41,17 +41,5 @@ Case 7: PASS
 Case 7 - Question: "Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} ", Extracted Answer: "2.", Expected: "2", Similarity: 0.8948250412940979
 Method and Approach: The answer to \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)}
 
-Calling GPT for case 8 with question: Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to -6} \frac{2x + 12}{|x + 6|}
-GPT Successfully Answered with The answer to \lim_{x \to -6} \frac{2x + 12}{|x + 6|} is DNE (Does Not Exist).
-Case 8: FAIL
-Case 8 - Question: "Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to -6} \frac{2x + 12}{|x + 6|}", Extracted Answer: "DNE (Does Not Exist).", Expected: "No Solution", Similarity: 0.26410675048828125
-Method and Approach: The answer to \lim_{x \to -6} \frac{2x + 12}{|x + 6|}
-
-Calling GPT for case 9 with question: Use the definition of continuity and the properties of limits to show that the function is continuous on the given interval. f(x) = \frac{2x + 3}{x - 2}, \quad (2, \infty)
-GPT Successfully Answered with The answer is The function f(x) = \frac{2x + 3}{x -2} is continuous on the interval (2, \infty).
-Case 9: FAIL
-Case 9 - Question: "Use the definition of continuity and the properties of limits to show that the function is continuous on the given interval. f(x) = \frac{2x + 3}{x - 2}, \quad (2, \infty)", Extracted Answer: "continuous on the interval (2, \infty).", Expected: "No Solution", Similarity: 0.069455087184906
-Method and Approach: The answer is The function f(x) = \frac{2x + 3}{x -2}
-
-Passed: 4, Failed: 5
-Pass Rate for Answer: 44.44%
+Passed: 4, Failed: 3
+Pass Rate for Answer: 0.57%
