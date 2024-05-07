@@ -1,0 +1,74 @@
+connor@Connors-MacBook-Pro llm_evaluation % /usr/local/bin/python3 /Users/connor/Documents/VSCode/llm_evaluation/sentence_eval_git/sentence_evaluation/automated.py
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 24 for: Use continuity to evaluate the limit. \lim_{x \to 1} e^{x^2 - x}
+GPT Answer: The answer to the limit \lim_{x \to 1} e^{x^2 - x} is e^0 = 1.
+Case 24: PASS
+Extracted Answer: "1."
+Expected: "1"
+Similarity: 0.8712990880012512
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 25 for: Find the limit. \lim_{x \to \infty} \frac{1}{2x + 3}
+GPT Answer: The answer to the limit \lim_{x \to \infty} \frac{1}{2x + 3} is 0.
+Case 25: PASS
+Extracted Answer: "0."
+Expected: "0"
+Similarity: 0.9097339510917664
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 26 for: Find the limit. \lim_{x \to -\infty} \frac{1 - x - x^2}{2x^2 - 7}
+GPT Answer: The answer to \lim_{x \to -\infty} \frac{1 - x - x^2}{2x^2 - 7} is -\frac{1}{2}.
+Case 26: PASS
+Extracted Answer: "-\frac{1}{2}."
+Expected: "-1/2"
+Similarity: 0.8209608793258667
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 27 for: Find the limit. \lim_{x \to \infty} \frac{x^3 + 5x}{2x^3 - x^2 + 4}
+GPT Answer: The answer to the limit \lim_{x \to \infty} \frac{x^3 + 5x}{2x^3 - x^2 + 4} is \frac{1}{2}.
+Case 27: PASS
+Extracted Answer: "\frac{1}{2}."
+Expected: "1/2"
+Similarity: 0.8159074783325195
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 28 for: Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)}
+GPT Answer: The answer to the limit \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} is 2.
+Case 28: PASS
+Extracted Answer: "2."
+Expected: "2"
+Similarity: 0.8948250412940979
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 29 for: Find the limit. \lim_{x \to \infty} \frac{\sqrt{9x^6 - x}}{x^3 + 1}
+GPT Answer: The answer to the limit \lim_{x \to \infty} \frac{\sqrt{9x^6 - x}}{x^3 + 1} is 3.
+Case 29: PASS
+Extracted Answer: "3."
+Expected: "3"
+Similarity: 0.8912153244018555
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 30 for: Find the limit. \lim_{x \to \infty} (\sqrt{9x^2 + x - 3x})
+GPT Answer: The answer to the limit \lim_{x \to \infty} (\sqrt{9x^2 + x - 3x}) is 3.
+Case 30: FAIL
+Extracted Answer: "3."
+Expected: "1/6"
+Similarity: 0.33267080783843994
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 31 for: Find the limit. \lim_{x \to \infty} (\sqrt{x^2 + ax} - \sqrt{x^2 + bx})
+GPT Answer: The answer to the limit \lim_{x \to \infty} (\sqrt{x^2 + ax} - \sqrt{x^2 + bx}) is (a - b)/2
+Case 31: PASS
+Extracted Answer: "(a - b)/2"
+Expected: "1/2 (a - b)"
+Similarity: 0.8545558452606201
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+Calling GPT for case: 32 for: Find the limit. \lim_{x \to \infty} \frac{x + x^3 + x^5}{1 - x^2 + x^4}
+GPT Answer: The answer to \lim_{x \to \infty} \frac{x + x^3 + x^5}{1 - x^2 + x^4} is infinity.
+Case 32: PASS
+Extracted Answer: "infinity."
+Expected: "infinity"
+Similarity: 0.9134718775749207
+----------------------------------------------------------------------------------------------------------------
+Passed: 8, Failed: 1
