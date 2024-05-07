@@ -1,0 +1,34 @@
+Input Features,Question,Expected Solution
+2.2 #25,Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^2}.,negative infinity
+2.3 (#27),Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x + 3},positive infinity
+(2.3) #39,"Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - 3|) ",6
+(2.3) #23,"Evaluate the limit, if it exists: \lim_{x \to 7} \frac{\sqrt{x + 2} - 3}{x - 7}. When giving the answer, format your response by saying `The answer to (question) is (answer).` For the answer only, display in Non Latex.",1/6
+(2.5) #31 ,Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 + x}},7/3
+(2.5) #33,Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x^2 - x},1
+(2.6) #21,Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} ,2
+(2.2) #29,Determine the infinite limit: \lim_{{x \to 3^+}} \ln(x^2 - 9),"negative infinity, or -infinity"
+(2.2) #31,"Determine the infinite limit: \lim_{{x \to 2\pi^-}} x \csc x
+","negative infinity, or -infinity"
+(2.3) #11,Evaluate the limit if it exists. \lim_{{x \to 2}} \frac{x^2 + x - 6}{x - 2},5
+(2.3) #13,Evaluate the limit if it exists. \lim_{{x \to 2}} \frac{x^2 - x + 6}{x - 2},Does not exist
+(2.3) #15,Evaluate the limit if it exists. \lim_{{t \to -3}} \frac{t^2 - 9}{2t^2 + 7t + 3},6/5
+(2.3) #17,Evaluate the limit if it exists. \lim_{{h \to 0}} \frac{(4 + h)^2 - 16}{h},8
+(2.3) #19,Evaluate the limit if it exists. \lim_{{x \to -2}} \frac{x + 2}{x^3 + 8},1/12
+(2.3) #21,Evaluate the limit if it exists. \lim_{{t \to 9}} \frac{9 - t}{3 - \sqrt{t}},6
+(2.3) #25,Evaluate the limit if it exists. \lim_{{x \to -4}} \frac{1}{4} + \frac{1}{x},-1/16
+(2.3) #29,Evaluate the limit if it exists. \lim_{{t \to 0}} \left(\frac{1}{\sqrt{1 + t}} - \frac{1}{t}\right),-1/2
+(2.3) #41,"Find the limit, if it exists. If the limit does not exist, explain why. \lim_{{x \to 0.5^-}} \frac{2x - 1}{|2x^3 - x^2|}",-4
+(2.3) #43,"Find the limit, if it exists. If the limit does not exist, explain why. \lim_{{x \to 0}} \left(\frac{1}{x} - \frac{1}{|x|}\right)",Does not exist
+(2.3) #55 ,"If \lim_{{x \to 1}} \frac{f(x) - 8}{x - 1} = 10, find \lim_{{x \to 1}} f(x)",8
+(2.5) #1,Write an equation that expresses the fact that a function is continuous at the number 4. ,lim (x-> 4) f(x) = f(4)
+(2.5) #11,"Use the definition of continuity and the properties of limits to show that the function is continuous at the given number a. f(x) = (x + 2x^3)^4, \quad a = -1",
+2.5 #29,Locate the discontinuities of the function. y = \frac{1}{1 + e^{1/x}},x = 0
+2.5 #33,Use continuity to evaluate the limit. \lim_{x \to 1} e^{x^2 - x},1
+2.6 #15 ,Find the limit. \lim_{x \to \infty} \frac{1}{2x + 3},0
+2.6 #17,Find the limit. \lim_{x \to -\infty} \frac{1 - x - x^2}{2x^2 - 7},-1/2
+2.6 #19,Find the limit. \lim_{x \to \infty} \frac{x^3 + 5x}{2x^3 - x^2 + 4},1/2
+2.6 #21,Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)},2
+2.6 #23,Find the limit. \lim_{x \to \infty} \frac{\sqrt{9x^6 - x}}{x^3 + 1},3
+2.6 #25,Find the limit. \lim_{x \to \infty} (\sqrt{9x^2 + x - 3x}),1/6
+2.6 #27,Find the limit. \lim_{x \to \infty} (\sqrt{x^2 + ax} - \sqrt{x^2 + bx}),1/2 (a - b)
+2.6 #29,Find the limit. \lim_{x \to \infty} \frac{x + x^3 + x^5}{1 - x^2 + x^4},infinity
