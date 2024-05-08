@@ -9,7 +9,7 @@ def chat(prompt):
     messages=[{"role": "user", "content": prompt}])
     return response.choices[0].message.content.strip()
 
-file_path = 'all_automated_limits.csv'
+file_path = 'automated_limits_demo.csv'
 data = pd.read_csv(file_path)
 questions = expected_solution_array = data['Question'].fillna('No Solution').to_numpy()
 expected_solution_array = data['Expected Solution'].fillna('No Solution').to_numpy()
