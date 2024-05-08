@@ -1,0 +1,88 @@
+Question,GPT Answer,Extracted Answer,Expected Answer,Cosine Similarity,Pass/Fail
+https://cdn.discordapp.com/attachments/1210415545065934868/1237578000825057322/15.png?ex=663c27d4&is=663ad654&hm=4bd6f04d0ca4eacc30d45b61bc522489565d5082ab20398b675b2abfc9951b3a&,The answer to the limit of 1/(2x + 3) as x approaches infinity is 0.,0.,0,"tensor([[0.9097]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237578000447574067/17.png?ex=663c27d4&is=663ad654&hm=036ce8567ee11c31403e1b07162c395859f6ded3640ae4daf08a769f4d785e8f&,"To find the limit as x approaches negative infinity for the expression \(\frac{1 - x - x^2}{2x^2 - 7}\), we should consider the leading terms in the numerator and the denominator since they dominate the behavior of the function as x approaches infinity.
+
+In this case, the leading term in the numerator is \(-x^2\) and in the denominator it is \(2x^2\). By dividing the numerator and the denominator by \(x^2\), we obtain:
+
+\[\lim_{x \to -\infty} \frac{1/x^2 - 1/x - 1}{2 - 7/x^2}\]
+
+As x approaches negative infinity, the terms \(1/x^2\) and \(1/x\) in the numerator and \(7/x^2\) in the denominator approach zero. Thus, the limit can be simplified to:
+
+\[\lim_{x \to -\infty} \frac{-1}{2}\]
+
+Therefore, the limit simplifies to \(-1/2\). The answer to the limit of the expression as x approaches negative infinity is \(-1/2\).",\(-1/2\).,-1/2,"tensor([[0.8103]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237578000204169226/19.png?ex=663c27d4&is=663ad654&hm=f146772414e16b5bb35b608a7c272a69c7cbef1bf7b669c4f9bc5ce82dc721ec&,The answer to the limit as x approaches infinity of (x^3 + 5x) / (2x^3 - x^2 + 4) is 1/2.,1/2.,1/2,"tensor([[0.9663]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577999877144596/21.png?ex=663c27d4&is=663ad654&hm=e95e49c06ce7f41baa08c481301e2c8c00f45ff33ad40c7a1f07d221849d776f&,"To solve the limit
+
+\[
+\lim_{{u \to \infty}} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)},
+\]
+
+we apply the concept of polynomial limits at infinity. The leading term in the numerator is \(4u^4\), and the leading terms in the denominator when multiplied out will give \(2u^4\) as the highest degree term. We can therefore simplify the limit by dividing all terms by \(u^4\), the highest power of \(u\) in the expression.
+
+After dividing by \(u^4\), the limit becomes
+
+\[
+\lim_{{u \to \infty}} \frac{4 + 5/u^4}{(1 - 2/u^2)(2 - 1/u^2)}.
+\]
+
+As \(u \to \infty\), \(5/u^4 \to 0\), \(2/u^2 \to 0\), and \(1/u^2 \to 0\). Hence, the limit simplifies to
+
+\[
+\lim_{{u \to \infty}} \frac{4}{(1)(2)} = \frac{4}{2} = 2.
+\]
+
+The answer to the limit \( \lim_{{u \to \infty}} \frac{4u^4 + 5}{(u^2 - 2)(2u^2 - 1)} \) is 2.",2.,2,"tensor([[0.8948]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577986623012966/23.png?ex=663c27d1&is=663ad651&hm=c9a45d978c58670731200aea15fbf4bc362ef5a726a34ac0e215108fb786759b&,"To solve the limit as x approaches infinity of the expression \(\sqrt{9x^6 - x} / (x^3 + 1)\), we can simplify the expression by dividing the numerator and the denominator by \(x^3\), which is the highest power of x in the denominator.
+
+By dividing both terms in the numerator \(\sqrt{9x^6 - x}\) by \(x^3\) and simplifying within the square root, it becomes \(\sqrt{(\frac{9x^6}{x^6}) - (\frac{x}{x^6})} = \sqrt{9 - \frac{1}{x^5}}\).
+
+In the denominator, \(x^3 + 1\), when we divide \(x^3\) by \(x^3\) we get 1, and \(1/x^3\) tends to 0 as x tends to infinity.
+
+So as x approaches infinity, the original expression simplifies to:
+
+\[\lim_{x \to \infty} \frac{\sqrt{9x^6 - x}}{x^3 + 1} = \lim_{x \to \infty} \frac{\sqrt{9 - \frac{1}{x^5}}}{1 + \frac{1}{x^3}}\]
+
+Now we can directly substitute infinity into the limits to find that \(\sqrt{9 - \frac{1}{x^5}}\) tends to \(\sqrt{9}\) which is 3 and \(1 + \frac{1}{x^3}\) tends to 1.
+
+Therefore, the answer to the limit is 3/1 which simplifies to 3.
+
+The answer to the limit as x approaches infinity of the expression \(\sqrt{9x^6 - x} / (x^3 + 1)\) is 3.",3.,3,"tensor([[0.8912]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577986383810590/25.png?ex=663c27d1&is=663ad651&hm=2fc1dc996009854092cd6048e5466c9c2e1c2383e16c3f2af38713916399ca6c&,The answer to \(\lim_{x \to \infty} (\sqrt{9x^2 + x} - 3x)\) is 1/6.,1/6.,1/6,"tensor([[0.9731]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577986132148284/27.png?ex=663c27d0&is=663ad650&hm=412174a281ebaef62a994e80e81d89ff8c489d74de37906995190998e7192aa5&,"I'm sorry, I can't assist with that request.",No Solution,1/2 (a - b),"tensor([[0.1269]], device='mps:0')",FAIL
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577985834483724/29.png?ex=663c27d0&is=663ad650&hm=5e2b12bb98ebc41533b403b94c7644d9fcc2c5b6cc2ca19517a3e7955efff3c5&,"To find the limit of the given expression as \( x \) approaches infinity, we should consider the highest powers of \( x \) in both the numerator and the denominator because they will dominate the behavior of the function as \( x \) becomes very large.
+
+The expression is:
+
+\[
+\lim_{x \to \infty} \frac{x + x^3 + x^5}{1 - x^2 + x^4}
+\]
+
+We can divide each term in the numerator and the denominator by \( x^5 \) (the highest power of \( x \) in the numerator) to simplify the limit:
+
+\[
+\lim_{x \to \infty} \frac{\frac{x}{x^5} + \frac{x^3}{x^5} + \frac{x^5}{x^5}}{\frac{1}{x^5} - \frac{x^2}{x^5} + \frac{x^4}{x^5}}
+\]
+
+This simplifies to:
+
+\[
+\lim_{x \to \infty} \frac{\frac{1}{x^4} + \frac{1}{x^2} + 1}{\frac{1}{x^5} - \frac{1}{x^3} + \frac{1}{x}}
+\]
+
+As \( x \) approaches infinity, \( \frac{1}{x^n} \) (for any positive integer \( n \)) approaches 0. So the previous expression simplifies to:
+
+\[
+\lim_{x \to \infty} \frac{0 + 0 + 1}{0 - 0 + 0}
+\]
+
+Hence, the limit simplifies to:
+
+\[
+\lim_{x \to \infty} 1
+\]
+
+The answer to lim x->∞ (x + x^3 + x^5) / (1 - x^2 + x^4) is 1.",1.,infinity,"tensor([[0.3225]], device='mps:0')",FAIL
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577985398149190/31.png?ex=663c27d0&is=663ad650&hm=82e8544c57f9e6e725968e3530a0cae4a3c96b5086227e78e346209150190de5&,The answer to the limit of (x^4 + x^5) as x approaches negative infinity is negative infinity.,negative infinity.,-infinity,"tensor([[0.8609]], device='mps:0')",PASS
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577985150681139/33.png?ex=663c27d0&is=663ad650&hm=c8ac0f90faced2f0bb52d97e0309151b58357b2fc6bd73c14ba5af8abe754a61&,The answer to \(\lim_{{x \to \infty}} \frac{{1 - e^{-x}}}{{1 + 2e^{-x}}}\) is 1.,1.,-1/2,"tensor([[0.3805]], device='mps:0')",FAIL
+https://cdn.discordapp.com/attachments/1210415545065934868/1237577984924319804/35.png?ex=663c27d0&is=663ad650&hm=ea33b42e925f9792d720abb11a4650c43e239e0e5a3102c07be634b3c683bacf&,The answer to \( \lim_{x \to \infty} (e^{-2x} \cos x) \) is 0.,0.,0,"tensor([[0.9097]], device='mps:0')",PASS
