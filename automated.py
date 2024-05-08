@@ -1,27 +1,23 @@
 from openai import OpenAI
 import pandas as pd
-import time
-import re
-import sys
 from sentence_transformers import SentenceTransformer, util
-
-# Redirect print statements to a text file
-# sys.stdout = open('output_log.txt', 'w')
+import matplotlib.pyplot as plt
 
 client = OpenAI(api_key="")
-
 def chat(prompt):
     response = client.chat.completions.create(model="gpt-3.5-turbo",
     messages=[{"role": "user", "content": prompt}])
     return response.choices[0].message.content.strip()
 
-file_path = 'all_automated.csv'
+file_path = 'all_automated_limits.csv'
 data = pd.read_csv(file_path)
 questions = expected_solution_array = data['Question'].fillna('No Solution').to_numpy()
 expected_solution_array = data['Expected Solution'].fillna('No Solution').to_numpy()
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
+results = []
 pass_count, fail_count = 0, 0
+threshold = 0.725 # found from analyzing test results for when GPT answer should be a pass or fail
 
 for idx, (question, expected_output) in enumerate(zip(questions, expected_solution_array)):
     expected_output = str(expected_output)
@@ -51,12 +47,14 @@ for idx, (question, expected_output) in enumerate(zip(questions, expected_soluti
     embedding_1 = model.encode(extracted_answer, convert_to_tensor=True)
     embedding_2 = model.encode(expected_output, convert_to_tensor=True)
     cosine_similarity = util.pytorch_cos_sim(embedding_1, embedding_2)
-    if cosine_similarity > 0.75:
+    pass_fail = 'PASS' if cosine_similarity > threshold else 'FAIL'
+    if cosine_similarity > threshold:
         print(f'Case {idx + 1}: PASS')
         pass_count += 1
     else:
         print(f'Case {idx + 1}: FAIL')
         fail_count += 1
+    results.append([question, gpt_output, extracted_answer, expected_output, cosine_similarity, pass_fail])
     print(f'Extracted Answer: "{extracted_answer}"')
     print(f'Expected: "{expected_output}"\nSimilarity: {cosine_similarity.item()}')
     print("----------------------------------------------------------------------------------------------------------------")
@@ -66,6 +64,14 @@ total = pass_count + fail_count
 print(f'Passed: {pass_count}, Failed: {fail_count}')
 print("Pass Rate for Answer: {:.2f}%".format(pass_count / total * 100))
 
-# Close the file to ensure all data is written
-# sys.stdout.close()
-# sys.stdout = sys.__stdout__  # Restore standard output to its original state
+df_results = pd.DataFrame(results, columns=['Question', 'GPT Answer', 'Extracted Answer','Expected Answer', 'Cosine Similarity', 'Pass/Fail'])
+df_results.to_csv('test_case_results.csv', index=False)
+
+labels = ['Passed', 'Failed']
+sizes = [pass_count, fail_count]
+colors = ['green', 'red']
+
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%')
+plt.axis('equal')
+plt.title('Test Case Results')
+plt.show()
