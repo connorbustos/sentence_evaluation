@@ -15,7 +15,26 @@ def chat(prompt):
     messages=[{"role": "user", "content": prompt}])
     return response.choices[0].message.content.strip()
 
-file_path = 'all_automated.csv'
+def chat_image(prompt, url):
+    response = client.chat.completions.create(
+    model="gpt-4-vision-preview",
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": prompt},
+                {
+                    "type": "image_url",
+                    "image_url": url,
+                },
+            ],
+        }
+    ],
+        # max_tokens=300, if you want to limit output to 300 tokens
+    )
+    return response.choices[0].message.content.strip()
+
+file_path = 'limits_images.csv'
 data = pd.read_csv(file_path)
 questions = expected_solution_array = data['Question'].fillna('No Solution').to_numpy()
 expected_solution_array = data['Expected Solution'].fillna('No Solution').to_numpy()
@@ -29,7 +48,8 @@ for idx, (question, expected_output) in enumerate(zip(questions, expected_soluti
         continue
     print("----------------------------------------------------------------------------------------------------------------")
     print("Calling GPT for case: " + str(idx + 1) + " for: " + question)
-    gpt_output = str(chat("Solve this question. " + question + ". When giving the answer, format your response by returning `The answer to (question) is (answer)`. You have to format the answer in that way because I am extracting the answer in your last sentence after the substring ` is `"))
+    prompt = "Describe this image for me. "
+    gpt_output = str(chat_image(prompt, question))
     print("GPT Answer:", gpt_output)
     # Find the last occurrence of "is" or "="
     last_is_index = gpt_output.rfind(" is ")
