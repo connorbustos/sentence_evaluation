@@ -1,0 +1,30 @@
+Question,GPT Answer,Extracted Answer,Expected Answer,Cosine Similarity,Pass/Fail
+Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^0},The answer to the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^0} is -1.,-1.,Error due to division by zero,"tensor([[0.2533]], device='mps:0')",FAIL
+Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x - 3},The answer to the infinite limit: lim_{x \to -3^+} \frac{x + 2}{x - 3} is -\infty.,-\infty.,Limit does not exist due,"tensor([[0.2121]], device='mps:0')",FAIL
+"Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - laptop|)",The answer to the limit \lim_{x \to 3} (2x + |x - laptop|) is 5.,5.,Invalid as 'laptop' is not a numerical value,"tensor([[0.0929]], device='mps:0')",FAIL
+"Evaluate the limit, if it exists: \frac{\sqrt{x + 2} - 3}{x - 7}","To evaluate the limit of the expression \frac{\sqrt{x + 2} - 3}{x - 7}, we can try direct substitution:
+
+\lim_{{x \to 7}} \frac{\sqrt{x + 2} - 3}{x - 7} 
+
+= \frac{\sqrt{7 + 2} - 3}{7 - 7} 
+
+= \frac{\sqrt{9} - 3}{0} 
+
+= \frac{3 - 3}{0}
+
+= \frac{0}{0}
+
+Since we got an indeterminate form of \frac{0}{0}, we can simplify the expression further using L'Hopital's Rule:
+
+\lim_{{x \to 7}} \frac{\sqrt{x + 2} - 3}{x - 7} = \lim_{{x \to 7}} \frac{\frac{1}{2\sqrt{x + 2}}}{1}
+
+Now, substituting x = 7:
+
+\frac{\frac{1}{2\sqrt{9}}}{1} = \frac{\frac{1}{2 * 3}}{1} = \frac{\frac{1}{6}}{1} = \frac{1}{6}
+
+Therefore, the answer to the expression \frac{\sqrt{x + 2} - 3}{x - 7} as x approaches 7 is 1/6.",1/6.,Invalid as the limit condition is missing.,"tensor([[0.2080]], device='mps:0')",FAIL
+Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 - x}},The answer to \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 - x}} is -\frac{5}{3}.,-\frac{5}{3}.,"Invalid as the expression under the square root becomes negative for x > 5, making it undefined for x approaching 4.","tensor([[0.5044]], device='mps:0')",FAIL
+Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x/0},The answer to \lim_{x \to 1} e^{x/0} is e.,e.,"Invalid as there is a division by zero in the exponent, resulting in an undefined expression.","tensor([[0.0976]], device='mps:0')",FAIL
+Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{u^0},The answer to \lim_{u \to \infty} \frac{4u^4 + 5}{u^0} is infinity.,infinity.,"Invalid, the limit diverges to infinity.","tensor([[0.4202]], device='mps:0')",FAIL
+Determine the infinite limit: \lim_{{x \to 3^+}} \ln(-x^2 - 9),The answer to \lim_{{x \to 3^+}} \ln(-x^2 - 9) is -\infty.,-\infty.,"Invalid as the natural logarithm is negative, which is undefined","tensor([[0.1796]], device='mps:0')",FAIL
+Determine the infinite limit: \lim_{{x \to 2\pi^-}} x \text{csc} \pi x,The answer to the question is infinity.,infinity.,Invalid as the usage of csc function is undefined,"tensor([[0.0292]], device='mps:0')",FAIL

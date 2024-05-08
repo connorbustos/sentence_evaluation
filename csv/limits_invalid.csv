@@ -1,0 +1,10 @@
+Input Features,Invalid Feature,Question,Expected Solution
+2.2 #25,Division by 0,Determine the infinite limit: \lim_{x \to 1} \frac{2 - x}{(x - 1)^0},Error due to division by zero
+2.3 (#27),Division by 0,Determine the infinite limit: \lim_{x \to -3^+} \frac{x + 2}{x - 3},Limit does not exist due
+(2.3) #39,Invalid Word in the Latex,"Find the limit, if it exists. If the limit does not exist, explain why. \lim_{x \to 3} (2x + |x - laptop|)",Invalid as 'laptop' is not a numerical value
+(2.3) #23,Removing the Limit,"Evaluate the limit, if it exists: \frac{\sqrt{x + 2} - 3}{x - 7}",Invalid as the limit condition is missing.
+(2.5) #31 ,Invalid Square Root,Use continuity to evaluate the limit. \lim_{x \to 4} \frac{5 + \sqrt{x}}{\sqrt{5 - x}},"Invalid as the expression under the square root becomes negative for x > 5, making it undefined for x approaching 4."
+(2.5) #33,Invalid Exponent,Use continuity to evaluate the limit.  \lim_{x \to 1} e^{x/0},"Invalid as there is a division by zero in the exponent, resulting in an undefined expression."
+(2.6) #21,Division by 0,Find the limit. \lim_{u \to \infty} \frac{4u^4 + 5}{u^0},"Invalid, the limit diverges to infinity."
+(2.2) #29,Undefined Input,Determine the infinite limit: \lim_{{x \to 3^+}} \ln(-x^2 - 9),"Invalid as the natural logarithm is negative, which is undefined"
+(2.2) #31,Invalid csc,Determine the infinite limit: \lim_{{x \to 2\pi^-}} x \text{csc} \pi x,Invalid as the usage of csc function is undefined
